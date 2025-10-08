@@ -1,3 +1,38 @@
+# Development Log
+
+## CapeLaunch Updates - October 8, 2025
+
+### Investigation of Landing Type Detection
+- Current Implementation:
+  - The app shows sonic boom warnings based on the `firstStageLanding` boolean
+  - This boolean is determined by `launch.rocket?.configuration?.reusable` from the Launch Library API
+  - Warning appears as both an indicator badge and an expanded warning message
+
+### Investigation Findings
+- Attempted to get more precise landing information from Launch Library API
+- Fields investigated in API response:
+  - `launch.rocket.landing_type`
+  - `launch.rocket.landing_success`
+  - `launch.rocket.configuration.reusable`
+- Found that specific landing type information (RTLS vs drone ship) is currently returning as undefined
+- Keeping current implementation based on `reusable` flag for now
+
+### Future Improvements
+- Consider integrating SpaceX API for more accurate landing information
+- SpaceX API's `/v4/cores` endpoint could provide specific landing type data
+- This would allow differentiation between:
+  - Return to Launch Site (RTLS) landings that cause sonic booms
+  - Drone ship landings that don't affect local area
+
+### Recent UI Changes
+- Abbreviated month format
+- Removed redundant rocket type from launch details
+- Increased logo size by 15% for better mobile visibility
+- Reduced space between logo and tagline by 15%
+- Updated tagline to "Cape Canaveral Rocket Launches"
+
+---
+
 # FloatPlan Development Log
 
 ## Project Overview
