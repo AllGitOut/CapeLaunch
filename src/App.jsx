@@ -175,7 +175,7 @@ function LaunchCard({ launch, isNext = false }) {
   const formatDateTime = (date) => {
     const dateStr = new Date(date).toLocaleString('en-US', {
       weekday: 'short',
-      month: 'long',
+      month: 'short',
       day: 'numeric',
       year: 'numeric'
     })
@@ -198,7 +198,7 @@ function LaunchCard({ launch, isNext = false }) {
           
           <h3>{launch.missionName}</h3>
           <p className="launch-details">
-            {launch.rocket} • {launch.launchPad}
+            {launch.launchPad}
           </p>
           <p className="launch-location">{launch.location}</p>
           
@@ -328,7 +328,7 @@ export default function App() {
     <div className="app">
       <header className="hero">
         <img src={capeLaunchLogo} alt="CapeLaunch" className="hero-logo-large" />
-        <p className="hero-tagline">Your gateway to Cape Canaveral rocket launches</p>
+        <p className="hero-tagline">Cape Canaveral Rocket Launches</p>
       </header>
 
       {nextLaunch && (
