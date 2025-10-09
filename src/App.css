@@ -229,6 +229,21 @@ footer {
   font-size: 0.9rem;
 }
 
+footer p {
+  margin: 8px 0;
+}
+
+.footer-link {
+  color: #f77f00;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #fcbf49;
+  text-decoration: underline;
+}
+
 /* Loading and Error States */
 .loading-state, .error-state {
   text-align: center;
