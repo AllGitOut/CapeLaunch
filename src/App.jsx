@@ -349,7 +349,7 @@ export default function App() {
 
       <footer>
         <p>Cape Canaveral Launch Schedule • Data from Launch Library API</p>
-        <p><a href="https://allgitout.github.io/CapeMoon/" target="_blank" rel="noopener noreferrer" className="footer-link">View Moon Phase Calendar</a></p>
+        <p><a href="https://allgitout.github.io/CapeMoon/" target="_blank" rel="noopener noreferrer" className="footer-link">View Moon Phase Calendar »</a></p>
       </footer>
     </div>
   )
